@@ -15,6 +15,7 @@
  */
 void _print(const char *string);
 void display_prompt(void);
+void execute_command(const char *command);
 
 #endif
 
