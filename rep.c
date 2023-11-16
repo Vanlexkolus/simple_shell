@@ -38,11 +38,11 @@ int REPL(char *buf, size_t buf_len, char **cmd, char **argv, char **env)
 		{
 			continue;
 		}
-		if (_strcmp(cmp[0], "exit") == 0 && get_arr_len(cmd) == 2)
+		if (_strcmp(cmd[0], "exit") == 0 && get_arr_len(cmd) == 2)
 		{
 			exit_arg(cmd);
 		}
-		execute_cmf(cmd, argv, env);
+		execute_cmd(cmd, argv, env);
 	} while (1);
 	return (0);
 }
